@@ -1,0 +1,79 @@
+{
+  "name": "vue-shepherd",
+  "version": "0.1.0",
+  "description": "A Vue wrapper for the site tour library Shepherd.",
+  "keywords": [
+    "vue",
+    "site tour",
+    "tour",
+    "shepherd"
+  ],
+  "repository": "https://github.com/shipshapecode/vue-shepherd",
+  "license": "MIT",
+  "author": {
+    "name": "Robert Wagner",
+    "email": "rwwagner90@gmail.com",
+    "url": "https://github.com/rwwagner90"
+  },
+  "scripts": {
+    "serve": "yarn demo",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "demo": "vue-cli-service demo",
+    "docs": "yarn docs:serve",
+    "docs:build": "vue-cli-service docs --mode build",
+    "docs:serve": "vue-cli-service docs --mode serve",
+    "prepublish": "yarn lint && yarn build",
+    "start": "yarn serve"
+  },
+  "main": "dist/vue-shepherd.common.js",
+  "module": "dist/vue-shepherd.esm.js",
+  "unpkg": "dist/vue-shepherd.umd.min.js",
+  "files": [
+    "dist/vue-shepherd.common.js",
+    "dist/vue-shepherd.umd.min.js",
+    "dist/vue-shepherd.umd.js",
+    "dist/vue-shepherd.esm.js",
+    "src"
+  ],
+  "dependencies": {
+    "shepherd.js": "^7.2.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.2.3",
+    "@vue/cli-plugin-eslint": "^4.2.3",
+    "@vue/cli-service": "^4.2.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.11.3",
+    "less-loader": "^6.1.0",
+    "vue-cli-plugin-p11n": "^0.4.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "jsdelivr": "dist/vue-shepherd.umd.min.js",
+  "sideeffects": false
+}
